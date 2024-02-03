@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AAA Style Reference Generator</title>
+</head>
+<body>
+    <div id="reference-form">
+        <h1 style="text-align: center;">AAA Style Reference Generator</h1>
+
+        <div id="author-fields" class="author-fields">
+            <div class="author">
+                <label for="last-name">Author Last Name:</label>
+                <input type="text" class="last-name" placeholder="Last name">
+
+                <label for="first-name">Author First Name:</label>
+                <input type="text" class="first-name" placeholder="First name">
+            </div>
+        </div>
+
+        <button id="add-author" onclick="openPopup()">Add Another Author</button>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Title of the work">
+
+        <label for="journal">Journal:</label>
+        <input type="text" id="journal" placeholder="Name of the journal">
+
+        <label for="volume">Volume:</label>
+        <input type="text" id="volume" placeholder="Volume number">
+
+        <label for="issue">Issue:</label>
+        <input type="text" id="issue" placeholder="Issue number">
+
+        <label for="page-range">Page Range:</label>
+        <input type="text" id="page-range" placeholder="Page range (e.g., 45-89)">
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" placeholder="Publication year">
+
+        <button onclick="generateReference()">Generate Reference</button>
+        <button onclick="resetForm()">Reset</button>
+        <button id="copy-button" onclick="copyToClipboard()">Copy</button>
+
+        <div id="output"></div>
+        <div id="error-message" class="error-message"></div>
+
+        <script src="script.js"></script>
+    </div>
+
+    <!-- Popup for adding multiple authors -->
+    <div id="author-popup" class="popup">
+        <div id="popup-content">
+            <h2>Add Another Author</h2>
+            <label for="popup-last-name">Author Last Name:</label>
+            <input type="text" id="popup-last-name" placeholder="Last name">
+
+            <label for="popup-first-name">Author First Name:</label>
+            <input type="text" id="popup-first-name" placeholder="First name">
+
+            <button onclick="addAuthorFromPopup()">Add Author</button>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+</body>
+</html>
